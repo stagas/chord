@@ -3,6 +3,7 @@
  * @module chord
  * @author stagas
  * @desc chord player
+ * @version 1.1.0
  * @license mit
  */
 
