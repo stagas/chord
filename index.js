@@ -7,13 +7,9 @@
  */
 
 export default function Chord(Osc, a, b, c, d, e){
-  var voices = [
-    Osc(a, b, c, d, e),
-    Osc(a, b, c, d, e),
-    Osc(a, b, c, d, e),
-    Osc(a, b, c, d, e),
-    Osc(a, b, c, d, e)
-  ];
+  var voices = '1234567'.split('').map(function(){
+    return Osc(a,b,c,d,e);
+  });
   var play = Play(voices);
   return function(notes, vel){
     return notes.map(play(vel)).reduce(sum);
